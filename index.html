@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Expense Tracker Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="dashboard-header">
+      <div>
+        <p class="eyebrow">Finance Dashboard</p>
+        <h1>Expense Tracker</h1>
+        <p class="subtitle">Track income, expenses and spending habits in one place.</p>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle">Dark</button>
+    </section>
+
+    <section class="summary-grid">
+      <article class="summary-card">
+        <p>Total Balance</p>
+        <h2 id="balanceAmount">£0</h2>
+      </article>
+
+      <article class="summary-card income">
+        <p>Total Income</p>
+        <h2 id="incomeAmount">£0</h2>
+      </article>
+
+      <article class="summary-card expense">
+        <p>Total Expenses</p>
+        <h2 id="expenseAmount">£0</h2>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <form class="transaction-form" id="transactionForm">
+        <h2>Add Transaction</h2>
+
+        <label>
+          Transaction name
+          <input type="text" id="transactionName" placeholder="e.g. Salary, Groceries" />
+        </label>
+
+        <label>
+          Amount
+          <input type="number" id="transactionAmount" placeholder="e.g. 50" />
+        </label>
+
+        <label>
+          Type
+          <select id="transactionType">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </label>
+
+        <label>
+          Category
+          <select id="transactionCategory">
+            <option value="Salary">Salary</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Bills">Bills</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <button type="submit">Add Transaction</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+
+      <section class="transactions-panel">
+        <div class="panel-header">
+          <h2>Transactions</h2>
+
+          <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search..." />
+
+            <select id="filterCategory">
+              <option value="all">All categories</option>
+              <option value="Salary">Salary</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Bills">Bills</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <select id="sortTransactions">
+  <option value="newest">Newest</option>
+  <option value="oldest">Oldest</option>
+  <option value="highest">Highest amount</option>
+  <option value="lowest">Lowest amount</option>
+</select>
+          </div>
+        </div>
+
+        <div class="transaction-list" id="transactionList"></div>
+      </section>
+    </section>
+
+    <section class="breakdown-section">
+      <div>
+        <p class="eyebrow">Spending Breakdown</p>
+        <h2>Expenses by Category</h2>
+      </div>
+
+      <div class="chart-list" id="chartList"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
