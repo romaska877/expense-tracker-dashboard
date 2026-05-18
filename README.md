@@ -23,9 +23,9 @@ A responsive expense tracker dashboard built with HTML, CSS and JavaScript.
 - LocalStorage
 - GitHub Pages
 
-## Live Demo
+Live Demo 
+https://romaska877.github.io/expense-tracker-dashboard/
 
-Coming soon.
 
 ## Project Purpose
 
